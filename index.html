@@ -59,19 +59,28 @@ nav a{
     padding:40px 0;
 }
 
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+/* 🔥 YENİ BİLGİ KUTUSU */
+.info-box{
+    background:#fff7e6;
+    border-left:6px solid #5a3e1b;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+}
+
 .products{
     display:flex;
     flex-wrap:wrap;
     gap:20px;
     justify-content:center;
-}
-
-.card{
-    background:white;
-    width:300px;
-    border-radius:10px;
-    overflow:hidden;
-    box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
 .card img{
@@ -90,11 +99,12 @@ nav a{
 
 .btn{
     display:block;
-    background:#5a3e1b;
+    background:#25D366;
     color:white;
     text-align:center;
     padding:12px;
     text-decoration:none;
+    font-weight:bold;
 }
 
 .contact{
@@ -116,7 +126,7 @@ footer{
 <body>
 
 <header>
-    <h1>silivri odun satışı</h1>
+    <h1>Silivri Odun Satışı</h1>
     <p>Kaliteli Meşe, Gürgen ve Fırınlık Odun</p>
 </header>
 
@@ -126,7 +136,7 @@ footer{
 </nav>
 
 <section class="hero">
-    <h1>Kışa Hazırlanın! Uygun Fiyatlı Kaliteli Odun</h1>
+    <h1>Kışa Hazırlanın! Uygun Fiyatlı Odun</h1>
 </section>
 
 <div class="container">
@@ -140,35 +150,46 @@ footer{
 <div class="card">
 <img src="https://avatars.mds.yandex.net/i?id=6717cf65b78fd93123a47ffa88263051302e4cd9-12498226-images-thumbs&n=13">
 <h3>Şöminelik Meşe Odunu</h3>
-<p>Uzun süre yanar, yüksek ısı verir. 30cm, 35cm, 40cm istenilen boyutta hazırlanır</p>
+<p>Uzun süre yanar, yüksek ısı verir.</p>
 <a class="btn" href="tel:+905416351406">Ara</a>
 </div>
 
 <div class="card">
 <img src="https://avatars.mds.yandex.net/i?id=c4aefbe8d3acdb55db52997845e95d00793bf37a-10415032-images-thumbs&n=13">
-<h3>Sobalık meşe odunu</h3>
-<p>uzun süre yanar, yüksek ısı verir. İnce veya kalın istenilen ebatta hazırlanır</p>
-<a class="btn" href="tel:+95416351406">Ara</a>
+<h3>Sobalık Meşe Odunu</h3>
+<p>Kaliteli ve uzun yanış süresi.</p>
+<a class="btn" href="tel:+905416351406">Ara</a>
 </div>
 
 <div class="card">
 <img src="https://avatars.mds.yandex.net/i?id=ff593fc8fc0baf6bb01192f010fed28891553367-4868957-images-thumbs&n=13">
 <h3>Fırınlık Odun</h3>
-<p>Fırın ve pideciler için ince meşe ve gürgen odunu</p>
+<p>Pide ve fırın kullanımı için idealdir.</p>
 <a class="btn" href="tel:+905416351406">Ara</a>
 </div>
 
 </div>
 
-<br><br>
+<br>
+
+<!-- 🔥 YENİ BİLGİ MESAJI BURADA -->
+<div class="info-box">
+  <h2>📢 Önemli Bilgi</h2>
+  <p>
+    Tüm odunlarımız doğal kurutulmuş ve yüksek ısı verimlidir.  
+    Silivri ve çevresine aynı gün teslimat yapılır.  
+    Toplu alımlarda özel fiyat uygulanır.
+  </p>
+</div>
 
 <div id="iletisim" class="contact">
 <h2>İletişim</h2>
 <br>
 <p><b>Telefon:</b> 0541 635 1406</p>
 <p><b>WhatsApp:</b> 0541 635 1406</p>
-<p><b>Adres:</b> İstanbul silivri</p>
+<p><b>Adres:</b> İstanbul Silivri</p>
 <br>
+
 <a class="btn" href="https://wa.me/905416351406">
 WhatsApp Sipariş Ver
 </a>
@@ -177,157 +198,8 @@ WhatsApp Sipariş Ver
 </div>
 
 <footer>
-    © 2026 Engin Odun Satışı - Tüm Hakları Saklıdır
+    © 2026 Silivri Odun Satışı
 </footer>
-
-<h2 style="text-align:center;">
-  Ziyaretçi Sayısı: <span id="sayac">0</span>
-</h2>
-
-<script>
-let sayi = localStorage.getItem("ziyaretciSayisi");
-
-if (sayi === null) {
-  sayi = 0;
-}
-
-    <!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Silivri Odun Satışı | Meşe - Gürgen - Fırınlık Odun</title>
-
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f4f4f4;
-    }
-
-    header {
-      background: #2e7d32;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-
-    nav {
-      background: #1b5e20;
-      text-align: center;
-      padding: 10px;
-      position: sticky;
-      top: 0;
-    }
-
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 15px;
-    }
-
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    h1, h2 {
-      color: #2e7d32;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 18px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background: #1ebe5d;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #2e7d32;
-      color: white;
-      margin-top: 20px;
-    }
-  </style>
-
-</head>
-
-<body>
-
-<header>
-  <h1>Silivri Odun Satışı</h1>
-  <p>Meşe - Gürgen - Fırınlık Odun | Kapıya Teslim</p>
-</header>
-
-<nav>
-  <a href="#meşe">Meşe Odun</a>
-  <a href="#bilgi">Bilgi</a>
-  <a href="#siparis">Sipariş</a>
-</nav>
-
-<div class="container">
-
-  <!-- MEŞE -->
-  <div class="card" id="meşe">
-    <h2>🔥 Meşe Odun</h2>
-    <p>
-      Yüksek ısı veren, kurutulmuş meşe odun satışımız vardır.
-      Soba ve fırın kullanımına uygundur.
-    </p>
-  </div>
-
-  <!-- BİLGİ -->
-  <div class="card" id="bilgi">
-    <h2>📌 Bilgi</h2>
-    <p>
-      Silivri ve çevresine hızlı odun teslimatı yapıyoruz.
-      Meşe, gürgen ve fırınlık odun seçenekleri mevcuttur.
-    </p>
-  </div>
-
-  <!-- SİPARİŞ -->
-  <div class="card" id="siparis">
-    <h2>📞 Sipariş Ver</h2>
-    <p>WhatsApp üzerinden hemen sipariş verebilirsiniz.</p>
-
-    <a class="btn" href="https://wa.me/905416351406" target="_blank">
-      WhatsApp Sipariş
-    </a>
-  </div>
-
-</div>
-
-<footer>
-  © 2026 Silivri Odun Satışı
-</footer>
-
-</body>
-</html>
-
-sayi = Number(sayi) + 1;
-
-localStorage.setItem("ziyaretciSayisi", sayi);
-
-document.getElementById("sayac").innerText = sayi;
-</script>
 
 </body>
 </html>
