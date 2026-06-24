@@ -171,15 +171,40 @@ footer{
   padding:20px;
   margin-top:30px;
 }
+.header-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
 
+.logo{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+}
+
+.header-text{
+  text-align:center;
+  flex:1;
+  }
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Silivri Oduncu</h1>
-  <p>Meşe, Gürgen, Sobalık, Şöminelik ve Fırınlık Odun</p>
+  <div class="header-wrap">
+
+    <img src="logo.png" class="logo" alt="Logo">
+
+    <div class="header-text">
+      <h1>Silivri Oduncu</h1>
+      <p>Meşe, Gürgen, Sobalık, Şöminelik ve Fırınlık Odun</p>
+    </div>
+
+    <img src="logo.png" class="logo" alt="Logo">
+
+  </div>
 </header>
 
 <!-- MENÜ -->
